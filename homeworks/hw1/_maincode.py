@@ -32,7 +32,9 @@ def playgame(word, hidden_word):
     with open ('hangdude.txt', encoding = "utf-8") as f:
         text = f.read()
         pics = text.split('\n\n')
+        
     splitword = splitt(word)
+    
     while win == -1:
         lt = input("Введите букву: ").lower()
         if lt not in letters:
