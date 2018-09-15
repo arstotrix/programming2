@@ -1,6 +1,7 @@
 import random
 import re
 
+#функция открывает файл и случайно выбриает слово из списка
 def choose_word(a):
     a = str(a)
     a += ".txt"
@@ -9,29 +10,78 @@ def choose_word(a):
         listt = text.split('\n')
     return random.choice(listt)
         
-    
+#функция зашифровывает слово для виселицы   
 def encrypt_word(a):
     a = a.replace(a[1:(len(a)-1)], ' _ '*(len(a)-2))
-    a = re.sub('  ',' ', a)
+    a = a.replace('  ',' ')
     return a
-
-def dictionarize(word):
-    count = {}
-    for w in word:
-        if w in count:
-            count[w] += 1
-            
+#функция разбивает слово пробелами
+def splitt(word):
+    splitword = word[0]
+    for w in word[1:]:
+        splitword = splitword + ' ' + w
+    return splitword   
+#функция играет с тобой в виселицу
+def playgame(word, hidden_word):
+    win = -1
+    wrong = ''
+    used = ''
+    letters = ['а','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я']
+    hw = list(hidden_word)
+    
+    with open ('hangdude.txt', encoding = "utf-8") as f:
+        text = f.read()
+        pics = text.split('\n\n')
+    splitword = splitt(word)
+    while win == -1:
+        lt = input("Введите букву: ").lower()
+        if lt not in letters:
+            print("Что Вы только что ввели?! Я же просила буквы!")
         else:
-            count[w] = 1    
-    return count
-  
-#def playgame():
+            if lt in used:
+                print("Вы уже использовали эту букву. Попробуйте ещё раз. Но желательно другую.")
+            else:
+                used = used + lt
+                if lt in word:
+                    print('Поздравляю, такая буква есть!')
+                    for i,s in enumerate(splitword):
+                        if lt == s:
+                            for j,h, in enumerate(hidden_word):
+                                if i == j:
+                                    hidden_word = ''
+                                    hw[j] = lt
+                                    for q in hw:
+                                        hidden_word += q
+                    print(hidden_word)
+                else:
+                    print(pics[len(wrong)])
+                    wrong = wrong + lt
+                    if len(wrong) == 7:
+                        win = 0
+                    elif len(wrong) == 6:
+                        print("Осталась одна попытка!")
+                    elif len(wrong) < 3:
+                        print("Осталось",7-len(wrong),"попыток!")
+                    else:
+                        print("Осталось",7-len(wrong),"попытки!")
+                    print(hidden_word)
+                print("Неправильные буквы:", wrong)
+                print("Использованные буквы:", used)
+                
+        if "_" not in hidden_word:
+            win = 1
+    return win
 
+#интерфейс
 def main():
     a = ""
     print('Давайте сыграем в виселицу!\n')
     while a != "0":
-        a = input('Нажмите 1, если хотите выбрать тему "Хищные птицы".\nНажмите 2, если хотите выбрать тему "Волейбол".\nНажмите 3, если хотите выбрать тему "Кофе и чай".\nНажмите 0, если вы не хотите играть.\n')
+        print('Нажмите 1, если хотите выбрать тему "Хищные птицы".')
+        print('Нажмите 2, если хотите выбрать тему "Волейбол".')
+        print('Нажмите 3, если хотите выбрать тему "Кофе и чай".')
+        print('Нажмите 0, если вы не хотите играть.')
+        a = input('\n')
         if a == "0":
             print('Ладно, в другой раз.')
         else:
@@ -39,14 +89,15 @@ def main():
                 print ('Извините, такой команды я не знаю. Давайте я тогда выберу за вас.')
                 a = random.randint(1,3)
                 print("Ваша тема под номером",a)
-            print('На экране будет выводиться слово, в котором пропущены все буквы, кроме первой и последней.\nБуквы Ё, Й, Ъ учитываются.\nВам даётся 7 попыток.\nЗа каждую ошибку их становится на одну меньше.\nЕсли буква стоит в началe или конце, это не значит, что её нет в остальном слове.\n')
+            print('На экране будет выводиться слово, в котором пропущены все буквы, кроме первой и последней.')
+            print('Буквы Ё, Й, Ъ учитываются.')
+            print('Вам даётся 7 попыток. За каждую ошибку их становится на одну меньше.')
+            print('Если буква стоит в началe или конце, это не значит, что её нет в остальном слове.')
             word = choose_word(a)
             hidden_word = encrypt_word(word)
-            count = dictionarize(word)
             print("У вас есть 7 попыток, чтобы угадать слово длиной",len(word),"букв.")
             print(hidden_word)
-            #win = playgame()
-            win = 1
+            win = playgame(word, hidden_word)
             if win == 0:
                 print("К сожалению, Вы проиграли. Загаданное слово было",word)
             elif win == 1:

@@ -1,3 +1,5 @@
+import re
+
 def dictionarize(word):
     count = {}
     for w in word:
@@ -10,11 +12,12 @@ def dictionarize(word):
 def playgame(word, hidden_word, count):
     splitword = word[0]
     win = -1
-    rt = 0
+    #rt = 0
     wrong = ''
     used = ''
-    #letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-    letters = 'abcdefghijklmnopqrstuvwxyz'
+    letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+    #letters = 'abcdefghijklmnopqrstuvwxyz'
+    hw = list(hidden_word)
     
     with open ('hangdude.txt', encoding = "utf-8") as f:
         text = f.read()
@@ -25,29 +28,31 @@ def playgame(word, hidden_word, count):
         splitword = splitword + ' ' + w
 
     while win == -1:
-        l = input("Введите букву: ").lower()
-        if l not in letters:
+        lt = input("Введите букву: ").lower()
+        if lt not in letters:
             print("Что за фигню Вы только что ввели?! Я же просила буквы!")
         else:
-            if l in used:
+            if lt in used:
                 print("Вы уже использовали эту букву. Попробуйте ещё раз.")
             else:
-                used = used + l
-                if l in count:
+                used = used + lt
+                if lt in count:
                     print('Поздравляю, такая буква есть!')
-                    rt+=int(count[l])
-                    print(splitword)
-                    i = 0
-                    for s in splitword:
-                        if s == l:
-                            print(hidden_word[i])
-                            hidden_word = hidden_word.replace(hidden_word[i], l)
-                        i += 1
-                        #print(i)
-                        print(hidden_word)
+                    #rt+=int(count[lt])
+                    #print(rt)
+                    #print(splitword)
+                    for i,s in enumerate(splitword):
+                        if lt == s:
+                            for j,h, in enumerate(hidden_word):
+                                if i == j:
+                                    hidden_word = ''
+                                    hw[j] = lt
+                                    for q in hw:
+                                        hidden_word += q
+                    print(hidden_word)
                 else:
                     print(pics[len(wrong)])
-                    wrong = wrong + l
+                    wrong = wrong + lt
                     if len(wrong) == 7:
                         win = 0
                     elif len(wrong) == 6:
@@ -57,10 +62,11 @@ def playgame(word, hidden_word, count):
                     else:
                         print("Осталось",7-len(wrong),"попытки!")
                     print(hidden_word)
-                print("Неправильные буквы: ", wrong)
+                print("Неправильные буквы:", wrong)
+                print("Использованные буквы:", used)
                 
-        if rt == len(word):
-            win = 1    
+        if "_" not in hidden_word:
+            win = 1
     return win
 
 win = playgame('pretender','p _ _ _ _ _ _ _ r', dictionarize('pretender'))
