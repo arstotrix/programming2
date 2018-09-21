@@ -8,7 +8,17 @@ def dictionarize(word):
         else:
             count[w] = 1       
     return count
-
+def reveal(splitword, hidden_word, lt):
+    hw = list(hidden_word)
+    for i,s in enumerate(splitword):
+        if lt == s:
+            for j,h, in enumerate(hidden_word):
+                if i == j:
+                    hidden_word = ''
+                    hw[j] = lt
+                    for q in hw:
+                        hidden_word += q
+    return hidden_word
 def playgame(word, hidden_word, count):
     splitword = word[0]
     win = -1
@@ -16,8 +26,7 @@ def playgame(word, hidden_word, count):
     wrong = ''
     used = ''
     letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-    #letters = 'abcdefghijklmnopqrstuvwxyz'
-    hw = list(hidden_word)
+    letters = 'abcdefghijklmnopqrstuvwxyz'
     
     with open ('hangdude.txt', encoding = "utf-8") as f:
         text = f.read()
@@ -41,14 +50,7 @@ def playgame(word, hidden_word, count):
                     #rt+=int(count[lt])
                     #print(rt)
                     #print(splitword)
-                    for i,s in enumerate(splitword):
-                        if lt == s:
-                            for j,h, in enumerate(hidden_word):
-                                if i == j:
-                                    hidden_word = ''
-                                    hw[j] = lt
-                                    for q in hw:
-                                        hidden_word += q
+                    hidden_word = reveal(splitword, hidden_word, lt)
                     print(hidden_word)
                 else:
                     print(pics[len(wrong)])

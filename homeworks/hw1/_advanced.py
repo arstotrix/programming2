@@ -1,5 +1,6 @@
 import random
 import re
+import os
 
 #функция открывает файл и случайно выбриает слово из списка
 def choose_word(a):
@@ -12,7 +13,8 @@ def choose_word(a):
         
 #функция зашифровывает слово для виселицы   
 def encrypt_word(a):
-    a = (a.replace(a[1:(len(a)-1)], ' _ '*(len(a)-2))).replace('  ',' ')
+    a = a.replace(a[1:(len(a)-1)], ' _ '*(len(a)-2))
+    a = a.replace('  ',' ')
     return a
 #функция разбивает слово пробелами
 def splitt(word):
@@ -20,48 +22,39 @@ def splitt(word):
     for w in word[1:]:
         splitword = splitword + ' ' + w
     return splitword   
-#функция открывает побуквенно слово
-def reveal(splitword, hidden_word, lt):
-    hw = list(hidden_word)
-    for i,s in enumerate(splitword):
-        if lt == s:
-            for j,h, in enumerate(hidden_word):
-                if i == j:
-                    hidden_word = ''
-                    hw[j] = lt
-                    for q in hw:
-                        hidden_word += q
-    return hidden_word
 #функция играет с тобой в виселицу
 def playgame(word, hidden_word):
-    splitword = word[0]
     win = -1
-    #rt = 0
     wrong = ''
     used = ''
-    letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-    #letters = 'abcdefghijklmnopqrstuvwxyz'
+    letters = ['а','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я']
+    hw = list(hidden_word)
     
     with open ('hangdude.txt', encoding = "utf-8") as f:
         text = f.read()
         pics = text.split('\n\n')
-        #print(pics[0])
         
-    for w in word[1:]:
-        splitword = splitword + ' ' + w
-
+    splitword = splitt(word)
+    
     while win == -1:
         lt = input("Введите букву: ").lower()
-        if lt not in letters or len(lt) > 1 :
+        if lt not in letters:
             print("Что Вы только что ввели?! Я же просила буквы!")
         else:
             if lt in used:
-                print("Вы уже использовали эту букву. Попробуйте ещё раз.")
+                print("Вы уже использовали эту букву. Попробуйте ещё раз. Но желательно другую.")
             else:
                 used = used + lt
                 if lt in word:
                     print('Поздравляю, такая буква есть!')
-                    hidden_word = reveal(splitword, hidden_word, lt)
+                    for i,s in enumerate(splitword):
+                        if lt == s:
+                            for j,h, in enumerate(hidden_word):
+                                if i == j:
+                                    hidden_word = ''
+                                    hw[j] = lt
+                                    for q in hw:
+                                        hidden_word += q
                     print(hidden_word)
                 else:
                     print(pics[len(wrong)])
@@ -81,10 +74,14 @@ def playgame(word, hidden_word):
         if "_" not in hidden_word:
             win = 1
     return win
+#функция записывает рекорды в файл
+#def records(name, wins, fails)
+
 #интерфейс
 def main():
     a = ""
     print('Давайте сыграем в виселицу!\n')
+    name = input ("Представтесь, пожалуйста, или нажмите 0, чтобы играть анонимно.\n")
     while a != "0":
         print('Нажмите 1, если хотите выбрать тему "Хищные птицы".')
         print('Нажмите 2, если хотите выбрать тему "Волейбол".')
