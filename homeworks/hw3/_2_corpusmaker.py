@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 def findarticles():
     article_data = []
     with open ("articles.txt", 'r', encoding = 'utf-8') as f:
-        articles = json.load(f, ensure_ascii = False)
-    for a, key in articles.items():
+        articles = json.load(f)
+    for key, a in articles.items():
         soup = bs4.BeautifulSoup(a)
         article_text = soup.find('td', {'class': "center-content"})
         article_date = article_text.find("span", {"class": "news-date"}).get_text()
@@ -26,7 +26,8 @@ def findarticles():
         article_heading = html.unescape(article_heading)
         article_article = html.unescape(article_article)
 
-        article_data.append({'heading':article_heading, 'date': article_date, "article": article_article}, 'id': key)
+        print(article_heading, article_article, article_date)
+        article_data.append({'heading':article_heading, 'date': article_date, "article": article_article, 'id': key})
     return article_data
 
 def main():
