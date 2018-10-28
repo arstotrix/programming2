@@ -23,7 +23,7 @@ def findnews(code):
             with urllib.request.urlopen(req) as response:
                 text = response.read().decode('utf-8')
             articles[i] = url 
-            #print(text[:500])
+            print(i)
         except:
             continue
         time.sleep(0.05)
