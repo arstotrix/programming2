@@ -1,4 +1,5 @@
 import os
+#import requests
 import re
 import urllib.request
 import json
@@ -10,7 +11,7 @@ def findarticles():
     with open ("articles.txt", 'r', encoding = 'utf-8') as f:
         articles = json.load(f)
     for key, a in articles.items():
-        soup = bs4.BeautifulSoup(a)
+        soup = BeautifulSoup(a, 'html-parser')
         article_text = soup.find('td', {'class': "center-content"})
         article_date = article_text.find("span", {"class": "news-date"}).get_text()
         article_heading = article_text.find("h1").get_text()
