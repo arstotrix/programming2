@@ -12,7 +12,7 @@ def findarticles():
         articles = json.load(f)
     for key, a in articles.items():
         try:
-            print(key, a)
+            print(key)
             soup = BeautifulSoup(a, 'html.parser')
             article_text = soup.find('td', {'class': "center-content"})
             article_date = article_text.find("span", {"class": "news-date"}).get_text()
@@ -32,7 +32,8 @@ def findarticles():
             print(article_heading, article_article, article_date)
             article_data.append({'heading':article_heading, 'date': article_date, "article": article_article, 'id': key})
         except Exception:
-            print(a)
+            continue
+            #print(a)
     return article_data
 
 def main():

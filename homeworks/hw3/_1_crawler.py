@@ -8,13 +8,13 @@ import json
 import time
 from bs4 import BeautifulSoup
 
-def getfiles(url):
-    req = urllib.request.Request(url, headers = {"User-Agent":"Mozilla/5.0"})
-    with urllib.request.urlopen(req) as response:
-        text = response.read().decode('utf-8')
-    return text
+#def getfiles(url):
+#    req = urllib.request.Request(url, headers = {"User-Agent":"Mozilla/5.0"})
+#    with urllib.request.urlopen(req) as response:
+#        text = response.read().decode('utf-8')
+#    return text
     
-def findnews(code):
+def findnews():
     articles = {}
     for i in range(1,3554):
         try:
@@ -22,14 +22,14 @@ def findnews(code):
             req = urllib.request.Request(url, headers = {"User-Agent":"Mozilla/5.0"})
             with urllib.request.urlopen(req) as response:
                 text = response.read().decode('utf-8')
-            articles[i] = url 
+            articles[i] = text 
             print(i)
         except:
             continue
-        time.sleep(0.05)
-    with open ('articles.txt', 'w', encoding='utf-8') as f:
+        time.sleep(0.001)
+    with open ('articles_not.txt', 'w', encoding='utf-8') as f:
         json.dump(articles, f, indent = 4, ensure_ascii = False)
-    return articles 
+    #return articles 
 
 #def findarticles(news):
 #    article_data = []
@@ -50,8 +50,8 @@ def findnews(code):
 
 def main():
     url = "http://korolev.news/news" 
-    code = getfiles(url)
-    news = findnews(code)
+    #code = getfiles(url)
+    findnews()
     #articles = findarticles(news)
     
 
