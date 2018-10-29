@@ -50,17 +50,32 @@ def plaintxt(data):
 
 def make_dirs():
     base_path = ".\газета"
-    os.mkdir(os.path.join(base_path, "plain"))
-    os.mkdir(os.path.join(base_path, "mystem-xml"))
-    os.mkdir(os.path.join(base_path, "mystem-plain"))
+    os.makedirs(os.path.join(base_path, "plain"))
+    os.makedirs(os.path.join(base_path, "mystem-xml"))
+    os.makedirs(os.path.join(base_path, "mystem-plain"))
     for subfolder in ("plain", "mystem-xml", "mystem-plain"):
         for year in range(2010, 2018):
             for month in range(1, 13):
-                os.mkdir(os.path.join(base_path, subfolder,
+                os.makedirs(os.path.join(base_path, subfolder,
                          str(year), str(month)))
+
+def metadata(articles_data):
+    row = '%s\t-\t%s\t%s\tпублицистика\t\t%s\tнейтральный\tн-возраст\tн-уровень\tгородская\t%s\tВечерний Королёв\t%s\tгазета\tРоссия\tМО\tru'
+    with open ('rows.csv', 'w', encoding = 'utf-8') as f:
+        csv_fields = ['path', 'author', 'header', 'created', 'topic', 'sphere', 'topic', 'style', 'audience_age', 'audience_level', 'audience_size', 'source', 'publication', 'publ_year', 'medium', 'country', 'region', 'language']
+        f.write('\t'.join(csv_fields))
+        for article in articles_data:
+            f.write(row %"газета/plain/"+html.escape(article['heading']))
+            
+        
+        
+
+
 def main():
-    plaintxt(findarticles())
-    make_dirs
+    findar = findarticles()
+    plaintxt(findar)
+    make_dirs()
+    metadata(findar)
 if __name__ == "__main__":
     main()
     
