@@ -6,7 +6,12 @@
       <change afterPath="$PROJECT_DIR$/homeworks/hw3/_maincode.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/homeworks/hw3/articles.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/homeworks/hw3/getfiles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lessons/12345/new1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lessons/lessonten/newgame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lessons/lessonten/plottertest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lessons/lesson9/snakeflask.py" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/snakeflask.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,52 +23,42 @@
     <session id="-662428687">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
-          <entry key="py" value="6" />
+          <entry key="html" value="4" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="Python" value="6" />
+          <entry key="HTML" value="4" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="341" />
+          <entry key="py" value="1124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="341" />
+          <entry key="Python" value="1124" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../fun/prepods shl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,12 +75,17 @@
       <list>
         <option value="$PROJECT_DIR$/lessons/lesson9/snakeflask.py" />
         <option value="$PROJECT_DIR$/../fun/prepods shl.py" />
+        <option value="$PROJECT_DIR$/plottertest.py" />
+        <option value="$PROJECT_DIR$/lessons/lessonten/plottertest.py" />
+        <option value="$PROJECT_DIR$/lessons/lessonten/newgame.py" />
+        <option value="$PROJECT_DIR$/lessons/lesson9/new1.py" />
+        <option value="$PROJECT_DIR$/lessons/12345/new1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
+    <option name="x" value="85" />
+    <option name="y" value="-10" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -95,6 +95,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,17 +117,35 @@
               <item name="programming2" type="b2602c69:ProjectViewProjectNode" />
               <item name="programming2" type="462c0819:PsiDirectoryNode" />
               <item name="lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="12345" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="programming2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="lessons" type="462c0819:PsiDirectoryNode" />
               <item name="lesson9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="programming2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="lessonten" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../fun/prepods shl.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\универ\программирование\programming2\lessons\12345" />
+      <recent name="C:\Users\Пользователь\универ\программирование\programming2\lessons" />
+      <recent name="C:\Users\Пользователь\универ\программирование\programming2\lessonten" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -140,7 +159,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.prepods shl">
+  <component name="RunManager" selected="Python.new1 (1)">
+    <configuration name="new1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="programming2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lessons/12345" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lessons/12345/new1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="new1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="programming2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lessons/lesson9" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Пользователь\универ\программирование\programming2\lessons\12345\new1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="prepods shl" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="programming2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,7 +235,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lessons/lesson9/snakeflask.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Пользователь\универ\программирование\programming2\lessons\snakeflask.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,11 +247,15 @@
     <list>
       <item itemvalue="Python.snakeflask" />
       <item itemvalue="Python.prepods shl" />
+      <item itemvalue="Python.new1" />
+      <item itemvalue="Python.new1 (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.prepods shl" />
+        <item itemvalue="Python.new1 (1)" />
+        <item itemvalue="Python.new1" />
         <item itemvalue="Python.snakeflask" />
+        <item itemvalue="Python.prepods shl" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +265,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -215,6 +280,22 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3291536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -227,10 +308,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lessons/lesson9/snakeflask.py">
+    <entry file="file://$PROJECT_DIR$/../fun/prepods shl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-end-line="10" />
+        <state relative-caret-position="148">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/lessonten/plottertest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/lessonten/newgame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/12345/new1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/snakeflask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <marker date="1542374687261" expanded="true" signature="131:136" ph="..." />
           </folding>
@@ -240,17 +352,7 @@
     <entry file="file://$PROJECT_DIR$/lessons/lesson9/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../fun/prepods shl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
