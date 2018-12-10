@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Опрос про </title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/79361FE4-E74C-7D43-AAC2-C2A26CF13468/main.js" charset="UTF-8"></script></head>
+<body>
+<form action="http://127.0.0.1:5000/thanks" method="POST">
+    <fieldset>
+        <legend><strong>Опрос про ???</strong></legend>
+<p>Пожалуйста, заполняйте таблицу на английском языке для удобства последующих операций с ней</p>
+
+Ваш пол:<br />
+<input checked="checked" name="ask" type="radio" value="M" />М<br />
+ <input name="ask" type="radio" value="F" />Ж<br />
+   <input name="ask" type="radio" value="N" />Другое<br /> <br/>
+ Ваш возраст: <br />
+<input name="age" pattern="[0-9]+" required="" type="text" /><br />
+<br>
+Ваше образование:
+<br /> <input name="how" pattern="[a-zA-Z]+" required="" type="text" /><br />
+ <!-- Здесь ещё будет информация -->
+<p><input type="submit" value="Отправить" /></p>
+</fieldset></form>
+<p><a href="/stats">Статистика опроса</a></p>
+<p><a href="/json">Json со всеми введенными на сайте данными </a></p>
+<p><a href="/search">Поиск по результатам</a></p>
+</form>
+<p><a href='/stats'>Статистика опроса</a></p>
+<p><a href='/json'>Json со всеми введенными на сайте данными
+</a></p>
+<p><a href='/search'>Поиск по результатам</a></p>
+</body>
+</html>

@@ -5,6 +5,10 @@ import json
 app = Flask(__name__)
 filename = 'flresults.csv'
 
+def csvmakerr():
+    with open() as f:
+        f.write('')
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -28,9 +32,18 @@ def thanks_file():
 def index():
     return render_template('index.html')
 
-@app.route('/')
+@app.route('/json')
 def index():
-    return render_template('index.html')'''
+    return render_template('index.html')
+
+@app.route('/search')    
+def index():
+    return render_template('search.html')
+
+@app.route('/results')
+def index():
+    return render_template('index.html')    
+'''
 
 if __name__ == '__main__':
     app.run(debug=True)
