@@ -1,34 +1,95 @@
-﻿<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <title>Опрос про </title>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/79361FE4-E74C-7D43-AAC2-C2A26CF13468/main.js" charset="UTF-8"></script></head>
+	<meta charset="utf-8">
+	<title>A Small English Test</title>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/79361FE4-E74C-7D43-AAC2-C2A26CF13468/main.js" charset="UTF-8"></script>
+</head>
 <body>
-<form action="http://127.0.0.1:5000/thanks" method="POST">
-    <fieldset>
-        <legend><strong>Опрос про ???</strong></legend>
-<p>Пожалуйста, заполняйте таблицу на английском языке для удобства последующих операций с ней</p>
-
-Ваш пол:<br />
-<input checked="checked" name="ask" type="radio" value="M" />М<br />
- <input name="ask" type="radio" value="F" />Ж<br />
-   <input name="ask" type="radio" value="N" />Другое<br /> <br/>
- Ваш возраст: <br />
-<input name="age" pattern="[0-9]+" required="" type="text" /><br />
-<br>
-Ваше образование:
-<br /> <input name="how" pattern="[a-zA-Z]+" required="" type="text" /><br />
- <!-- Здесь ещё будет информация -->
-<p><input type="submit" value="Отправить" /></p>
-</fieldset></form>
-<p><a href="/stats">Статистика опроса</a></p>
-<p><a href="/json">Json со всеми введенными на сайте данными </a></p>
-<p><a href="/search">Поиск по результатам</a></p>
-</form>
-<p><a href='/stats'>Статистика опроса</a></p>
-<p><a href='/json'>Json со всеми введенными на сайте данными
-</a></p>
-<p><a href='/search'>Поиск по результатам</a></p>
+	<h1>Greetings!</h1>
+	<p>Would you kindly look at this hard work of mine and take a small English vocabulary test?<br>It will not take long, but the results will be of great value for both you and me.</p>
+	<form action="http://127.0.0.1:5000/thanks" method="POST">
+		<fieldset>
+			<legend><strong><h3>A Small Test On Commonly Confused English Words</h3></strong></legend>
+			Your gender:
+			<p>
+				<input name="sex" type="radio" value="M">Male<br> 
+				<input name="sex" type="radio" value="F">Female<br> 
+				<input name="sex" type="radio" value="other">Other<br>
+			</p>
+			Your age: 
+			<p><input name="age" pattern="[0-9]+" required="" type="text"><br></p>
+			Your English level:
+			<p>
+				<input name="level" type="radio" value="a1">A1<br> 
+				<input name="level" type="radio" value="a2">A2<br>
+				<input name="level" type="radio" value="b1">B1<br>
+				<input name="level" type="radio" value="b2">B2<br>
+				<input name="level" type="radio" value="c1">C1<br>
+				<input name="level" type="radio" value="c2">C2<br>
+			</p>
+			<h3><strong>Please, finish the following sentences.</strong></h3>
+			1. We went before the teen <strong>(council, counsel)</strong>.<br>
+			<p>
+				<input name="q1" type="radio" value="council">council
+				<input name="q1" type="radio" value="counsel">counsel<br>
+			</p>
+			2. The <strong>(capital, capitol)</strong> of Colorado is Denver.<br>
+			<p>
+				<input name="q2" type="radio" value="capital">capital 
+				<input name="q2" type="radio" value="capitol">capitol<br>
+			</p>
+			3. This is a <strong>(stationary, stationery)</strong> bike.<br>
+			<p>
+				<input name="q3" type="radio" value="stationary">stationary 
+				<input name="q3" type="radio" value="stationery">stationery<br>
+			</p>
+			4. It was a steep <strong>(descent, dissent)</strong> into the cave.<br>	
+			<p>
+				<input name="q4" type="radio" value="descent">descent 
+				<input name="q4" type="radio" value="dissent">dissent<br>
+			</p>
+			5. Most drugs have side <strong>(affects, effects)</strong>.<br>
+			<p>
+				<input name="q5" type="radio" value="affects">affects 
+				<input name="q5" type="radio" value="effects">effects<br>
+			</p>
+			6. Warm bread <strong>(compliments, complements)</strong> any meal.<br>
+			<p>
+				<input name="q6" type="radio" value="compliments">compliments 
+				<input name="q6" type="radio" value="complements">complements<br>
+			</p>
+			7. I practice so I won't <strong>(lose, loose)</strong> the game.<br>
+			<p>
+				<input name="q7" type="radio" value="lose">lose 
+				<input name="q7" type="radio" value="loose">loose<br>
+			</p>
+			8. The Senate was in session at the <strong>(capital, capitol)</strong> today.<br>
+			<p>
+				<input name="q8" type="radio" value="capital">capital 
+				<input name="q8" type="radio" value="capitol">capitol<br>
+			</p>
+			9. My daughter likes purple <strong>(stationary, stationery)</strong>.<br>
+			<p>
+				<input name="q9" type="radio" value="stationary">stationary 
+				<input name="q9" type="radio" value="stationery">stationery<br>
+			</p>
+			10. The government's decision met with much <strong>(descent, dissent)</strong>.<br>
+			<p>
+				<input name="q10" type="radio" value="descent">descent 
+				<input name="q10" type="radio" value="dissent">dissent<br>
+			</p>
+			11. Voting can help <strong>(affect, effect)</strong> change.<br>
+			<p>
+				<input name="q11" type="radio" value="affect">affect 
+				<input name="q11" type="radio" value="effect">effect<br>
+			</p>
+			12. He will <strong>(council, counsel)</strong> me to help me make the right decision.<br>
+			<p>
+				<input name="q12" type="radio" value="council">council 
+				<input name="q12" type="radio" value="counsel">counsel<br>
+			</p>
+			<p><input type='submit' value='Отправить'></p>
+		</fieldset>
+	</form>
+	<p></p>
 </body>
-</html>
