@@ -28,11 +28,11 @@ def thanks_file():
             writer.writerow({'ask':ask, 'what':what, 'how':how, 'name':name, 'surname':surname})
         return render_template('thanks.html', fin_form=fin_form)
 
-'''@app.route('/')
-def index():
-    return render_template('index.html')
+@app.route('/')
+def stats():
+    return render_template('stats.html')
 
-@app.route('/json')
+'''@app.route('/json')
 def index():
     return render_template('index.html')
 
@@ -43,6 +43,10 @@ def index():
 @app.route('/results')
 def index():
     return render_template('index.html')    
+    
+@app.route('/correct')
+def index():
+    return render_template('correct.html')  
 '''
 
 if __name__ == '__main__':
